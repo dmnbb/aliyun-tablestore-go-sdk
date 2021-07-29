@@ -7,10 +7,10 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/aliyun/aliyun-tablestore-go-sdk/tunnel/protocol"
 	"github.com/cenkalti/backoff"
+	"github.com/dmnbb/aliyun-tablestore-go-sdk/tunnel/protocol"
 	"github.com/golang/protobuf/proto"
-	"github.com/satori/go.uuid"
+	uuid "github.com/satori/go.uuid"
 	"io"
 	"io/ioutil"
 	"net"
@@ -163,7 +163,10 @@ func (api *TunnelApi) doRequestInternal(url string, uri string, body []byte, res
 		hreq.Header.Set(xOtsHeaderStsToken, api.securityToken)
 		otshead.set(xOtsHeaderStsToken, api.securityToken)
 	}
-	traceId := uuid.NewV4()
+	traceId, err := uuid.NewV4()
+	if err != nil {
+		return nil, err, ""
+	}
 	hreq.Header.Set(xOtsHeaderTraceID, traceId.String())
 	otshead.set(xOtsHeaderTraceID, traceId.String())
 

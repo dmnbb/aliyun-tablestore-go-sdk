@@ -3,7 +3,7 @@ package tablestore
 import (
 	"bytes"
 	"fmt"
-	"github.com/aliyun/aliyun-tablestore-go-sdk/tablestore/otsprotocol"
+	"github.com/dmnbb/aliyun-tablestore-go-sdk/tablestore/otsprotocol"
 	"github.com/golang/protobuf/proto"
 	"io"
 	"io/ioutil"

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/aliyun/aliyun-tablestore-go-sdk/timeline"
+	"github.com/dmnbb/aliyun-tablestore-go-sdk/timeline"
 	"log"
 	"time"
 )

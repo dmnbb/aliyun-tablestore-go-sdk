@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"sync"
-	"github.com/aliyun/aliyun-tablestore-go-sdk/tablestore"
-	"github.com/aliyun/aliyun-tablestore-go-sdk/tablestore/search"
+	"github.com/dmnbb/aliyun-tablestore-go-sdk/tablestore"
+	"github.com/dmnbb/aliyun-tablestore-go-sdk/tablestore/search"
 	"github.com/golang/protobuf/proto"
 	"time"
 )
